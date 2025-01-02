@@ -13,7 +13,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                checkout scm
+                git credentialsId: 'github-token', url: 'https://github.com/Deepal05/mern-backend.git'
             }
         }
 
